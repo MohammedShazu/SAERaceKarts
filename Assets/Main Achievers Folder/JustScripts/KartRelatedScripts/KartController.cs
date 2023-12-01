@@ -7,8 +7,10 @@ public class KartController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
      private float _forwardAmount;
+    private float _turnAmount;
     private float _currentSpeed;
    [SerializeField] private float fowardSpeed;
+   [SerializeField] private float turnSpeed;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class KartController : MonoBehaviour
         transform.position = rb.transform.position;
         //the kart is essentially following the object
         _forwardAmount  = Input.GetAxis("Vertical");
+        _turnAmount = Input.GetAxis("Horizontal");
         if(_forwardAmount != 0)
         {
             DriveForward();
@@ -37,9 +40,12 @@ public class KartController : MonoBehaviour
         {
             Idle();
         }
+
+        TurnHandler();
     }
 
    
+
     private void FixedUpdate()
     {
         rb.AddForce(transform.forward * _currentSpeed, ForceMode.Acceleration);
@@ -54,7 +60,13 @@ public class KartController : MonoBehaviour
     } 
      private void Idle()
     {
-        throw new NotImplementedException();
+        _currentSpeed = 0;
     }
-
+    //This makes the car moving when you press play
+    private void TurnHandler()
+    {
+        float newRotation = _turnAmount * turnSpeed * Time.deltaTime;
+        transform.Rotate(0, newRotation, 0, Space.World);
+    }
+    //steering controls
 }
