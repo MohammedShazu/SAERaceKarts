@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 12269186}
   m_Layer: 6
   m_Name: Kart1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 17977460}
   m_Layer: 0
   m_Name: StartPoint
-  m_TagString: Untagged
+  m_TagString: StartLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104369493}
-  m_LocalRotation: {x: 0.07827214, y: 0.000000017681518, z: -0.0000000013882292, w: 0.996932}
+  m_LocalRotation: {x: 0.078272164, y: 0.000000017681518, z: -0.0000000013882298, w: 0.996932}
   m_LocalPosition: {x: 1.42, y: 2.94, z: 12.934401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 658977666}
   m_Layer: 0
   m_Name: FinishPoint
-  m_TagString: Untagged
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1190,7 +1190,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07827214, y: 0.000000017681518, z: -0.0000000013882292, w: 0.996932}
+  m_LocalRotation: {x: 0.078272164, y: 0.000000017681518, z: -0.0000000013882298, w: 0.996932}
   m_LocalPosition: {x: 1.42, y: 2.94, z: 12.934401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

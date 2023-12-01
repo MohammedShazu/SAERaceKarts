@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Make a condition using the start point script or collision
         timeIsRunning = true;
     }
 

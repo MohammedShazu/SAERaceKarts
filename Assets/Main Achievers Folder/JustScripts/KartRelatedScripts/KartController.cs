@@ -69,4 +69,16 @@ public class KartController : MonoBehaviour
         transform.Rotate(0, newRotation, 0, Space.World);
     }
     //steering controls
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "StartLine")
+        {
+            Debug.Log("You Have Started");
+        }
+        if (collision.collider.tag == "FinishLine")
+        {
+            Debug.Log("You have finished");
+        }
+    }
 }
