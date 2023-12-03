@@ -11,6 +11,8 @@ public class KartController : MonoBehaviour
     private float _currentSpeed;
    [SerializeField] private float fowardSpeed;
    [SerializeField] private float turnSpeed;
+    [SerializeField] public GameObject GO;
+    [SerializeField] private GameObject startTimer;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
@@ -27,12 +29,15 @@ public class KartController : MonoBehaviour
         //the kart is essentially following the object
         _forwardAmount  = Input.GetAxis("Vertical");
         _turnAmount = Input.GetAxis("Horizontal");
-        if(_forwardAmount != 0)
+
+        if (GO.GetComponent<StartCountdown>().countdownGo == true)
         {
-            DriveForward();
+            if (_forwardAmount != 0)
+            {
+                DriveForward();
+            }
         }
-        
-        else if(_forwardAmount < 0)
+        else if (_forwardAmount < 0)
         {
             Reverse();
         }
@@ -75,6 +80,7 @@ public class KartController : MonoBehaviour
         if(collision.collider.tag == "StartLine")
         {
             Debug.Log("You Have Started");
+            startTimer.GetComponent<Timer>().timeIsRunning = true;
         }
         if (collision.collider.tag == "FinishLine")
         {

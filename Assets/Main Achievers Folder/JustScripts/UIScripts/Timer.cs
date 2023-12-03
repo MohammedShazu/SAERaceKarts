@@ -9,24 +9,27 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 0f;
     public bool timeIsRunning = true;
     public TMP_Text timeText;
+   
     // Start is called before the first frame update
     void Start()
     {
         //Make a condition using the start point script or collision
-        timeIsRunning = true;
+        //timeIsRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeIsRunning)
-        {
-            if(timeRemaining >= 0)
+          
+            if (timeIsRunning)
             {
-                timeRemaining += Time.deltaTime;
-                DisplayTime(timeRemaining);
+                if (timeRemaining >= 0)
+                {
+                    timeRemaining += Time.deltaTime;
+                    DisplayTime(timeRemaining);
+                }
             }
-        }
+        
     }
 
     void DisplayTime(float timeToDisplay)
@@ -36,4 +39,6 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
+
+   
 }
