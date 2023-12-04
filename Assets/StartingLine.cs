@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartLine : MonoBehaviour
+public class StartingLine : MonoBehaviour
 {
+
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering the trigger is the player's car
@@ -14,3 +16,5 @@ public class StartLine : MonoBehaviour
         }
     }
 }
+
+    
