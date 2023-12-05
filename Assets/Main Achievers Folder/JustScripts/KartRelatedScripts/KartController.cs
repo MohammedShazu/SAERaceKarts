@@ -11,8 +11,8 @@ public class KartController : MonoBehaviour
     private float _currentSpeed;
    [SerializeField] private float fowardSpeed;
    [SerializeField] private float turnSpeed;
-    [SerializeField] public GameObject GO;
-    [SerializeField] private GameObject startTimer;
+   [SerializeField] private GameObject startTimer;
+    private bool countdownFinished = false;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
@@ -25,28 +25,32 @@ public class KartController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = rb.transform.position;
-        //the kart is essentially following the object
-        _forwardAmount  = Input.GetAxis("Vertical");
-        _turnAmount = Input.GetAxis("Horizontal");
-
-        if (GO.GetComponent<StartCountdown>().countdownGo == true)
+        if(countdownFinished)
         {
+
+            transform.position = rb.transform.position;
+            //the kart is essentially following the object
+            _forwardAmount = Input.GetAxis("Vertical");
+            _turnAmount = Input.GetAxis("Horizontal");
+
+
+
             if (_forwardAmount != 0)
             {
                 DriveForward();
             }
-        }
-        else if (_forwardAmount < 0)
-        {
-            Reverse();
-        }
-        if(_forwardAmount == 0)
-        {
-            Idle();
-        }
 
-        TurnHandler();
+            else if (_forwardAmount < 0)
+            {
+                Reverse();
+            }
+            if (_forwardAmount == 0)
+            {
+                Idle();
+            }
+
+            TurnHandler();
+        }
     }
 
    
@@ -74,6 +78,11 @@ public class KartController : MonoBehaviour
         transform.Rotate(0, newRotation, 0, Space.World);
     }
     //steering controls
+
+    public void CountdownFinished()
+    {
+        countdownFinished = true;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
