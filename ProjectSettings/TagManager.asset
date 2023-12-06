@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FinishLine
   - StartLine
+  - AI
   layers:
   - Default
   - TransparentFX
