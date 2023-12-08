@@ -7,14 +7,14 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 0f;
-    public bool timeIsRunning = true;
+    public bool timeIsRunning = false;
     public TMP_Text timeText;
    
     // Start is called before the first frame update
     void Start()
     {
         //Make a condition using the start point script or collision
-        //timeIsRunning = true;
+        timeIsRunning = false;
     }
 
     // Update is called once per frame

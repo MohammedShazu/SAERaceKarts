@@ -11,6 +11,7 @@ public class StartCountdown : MonoBehaviour
     public GameObject countdownGo;
 
     public KartController kartController;
+    public Timer timer;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class StartCountdown : MonoBehaviour
     {
         countdownTimer = 5;
         kartController = FindObjectOfType<KartController>();
+        timer = FindObjectOfType<Timer>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class StartCountdown : MonoBehaviour
             countdownGo.SetActive(true);
             countdown1.SetActive(false);
             kartController.countdownFinished = true;
+            timer.timeIsRunning = true;
         }
 
         if(countdownTimer <= -0.25f)
