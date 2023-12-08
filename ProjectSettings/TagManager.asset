@@ -7,6 +7,11 @@ TagManager:
   - FinishLine
   - StartLine
   - AI
+  - Turn1
+  - Turn2
+  - Turn3
+  - Turn4
+  - Turn5
   layers:
   - Default
   - TransparentFX
