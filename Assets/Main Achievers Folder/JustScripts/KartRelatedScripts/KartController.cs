@@ -12,7 +12,7 @@ public class KartController : MonoBehaviour
    [SerializeField] private float fowardSpeed;
    [SerializeField] private float turnSpeed;
    [SerializeField] private GameObject startTimer;
-    private bool countdownFinished = false;
+    public bool countdownFinished = false;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
