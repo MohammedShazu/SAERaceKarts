@@ -12,6 +12,17 @@ public class ThirdPersonController : MonoBehaviour
     private void Awake()
     {
         inputAsset = this.GetComponent<PlayerInput>().actions;
-        player = inputAsset.FindActionMap("Player");
+        player = inputAsset.FindActionMap("Kart1");
+    }
+
+    private void OnEnable()
+    {
+        move = player.FindAction("Move");
+        player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        player.Disable();
     }
 }
