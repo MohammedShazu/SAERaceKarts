@@ -15,6 +15,9 @@ public class KartController : MonoBehaviour
     public bool countdownFinished = false;
     public float gravityMultiplier;
 
+    private Vector2 inputVector = Vector2.zero;
+
+
     //creating a private rigidbody for reference
     // Start is called before the first frame update
     void Start()
@@ -99,5 +102,10 @@ public class KartController : MonoBehaviour
         {
             Debug.Log("You have finished");
         }
+    }
+
+    public void SetInputVector(Vector2 direction)
+    {
+        inputVector = direction;
     }
 }
