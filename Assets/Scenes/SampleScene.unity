@@ -6902,7 +6902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
   m_JoinBehavior: 1
@@ -7038,10 +7038,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1231700914151047497, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1231700914381556488, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
       propertyPath: startTimer
       value: 
       objectReference: {fileID: 17977458}
+    - target: {fileID: 1231700914381556488, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: gravityMultiplier
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1231700914381556491, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
       propertyPath: m_Name
       value: Kart1
@@ -7090,6 +7098,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1231700914974770108, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231700914974770108, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231700915079220299, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231700915564717400, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231700915605037417, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 629f866ccd6e0164095f6556d841e21a, type: 3}
 --- !u!1 &1231700914386484619 stripped
@@ -7110,3 +7138,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+--- !u!54 &1231700914386484625
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231700914386484619}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 2
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

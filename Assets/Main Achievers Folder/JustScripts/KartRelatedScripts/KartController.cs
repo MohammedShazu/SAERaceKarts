@@ -13,6 +13,7 @@ public class KartController : MonoBehaviour
    [SerializeField] private float turnSpeed;
    [SerializeField] private GameObject startTimer;
     public bool countdownFinished = false;
+    public float gravityMultiplier;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
@@ -51,13 +52,16 @@ public class KartController : MonoBehaviour
 
             TurnHandler();
         }
+       
     }
+    
 
    
 
     private void FixedUpdate()
     {
         rb.AddForce(transform.forward * _currentSpeed, ForceMode.Acceleration);
+        rb.AddForce(Vector3.down * gravityMultiplier * 10);
     }
     private void DriveForward()
     {
