@@ -11,6 +11,7 @@ public class StartCountdown : MonoBehaviour
     public GameObject countdownGo;
 
     public KartController kartController;
+    public LevelMusic levelMusic;
     public Timer timer;
 
 
@@ -19,6 +20,7 @@ public class StartCountdown : MonoBehaviour
     {
         countdownTimer = 5;
         kartController = FindObjectOfType<KartController>();
+        levelMusic = FindObjectOfType<LevelMusic>();
         timer = FindObjectOfType<Timer>();
     }
 
@@ -53,6 +55,7 @@ public class StartCountdown : MonoBehaviour
             countdown1.SetActive(false);
             kartController.countdownFinished = true;
             timer.timeIsRunning = true;
+            levelMusic.playMusic = true;
         }
 
         if(countdownTimer <= -0.25f)
@@ -60,6 +63,13 @@ public class StartCountdown : MonoBehaviour
             countdownGo.SetActive(false);
         }
 
-       
+        if (levelMusic.playMusic == true)
+        {
+           levelMusic.MusicPlayer.SetActive(true);
+        }
+        else
+        {
+            levelMusic.MusicPlayer.SetActive(false);
+        }
     }
 }
