@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelMusic : MonoBehaviour
+public class CountdownSound : MonoBehaviour
 {
-    public bool playMusic;
-    public GameObject MusicPlayer;
+    public bool playCountdown;
+    public GameObject countdownSoundBox;
+
     // Start is called before the first frame update
     void Start()
     {
-        playMusic = false;
+        playCountdown = false;
     }
 
     // Update is called once per frame
