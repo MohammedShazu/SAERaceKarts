@@ -34,63 +34,19 @@ public class ArrowSigns : MonoBehaviour
             }
         }
 
+
         if(kartInteractions.passingTurn2 == true)
         {
-            if(signTimer <= 1.5)
-            {
-                turnLeft.SetActive(true); // displays sign
-                signTimer += Time.deltaTime;
-            }
-            if(signTimer >= 1.5)
-            {
-                turnLeft.SetActive(false); // stops display
-                signTimer = 0;
-                kartInteractions.passingTurn2 = false;
-            }
-        }
-
-        if(kartInteractions.passingTurn3 == true)
-        {
-            if(signTimer <= 1.5)
-            {
-                turnLeft.SetActive(true); // displays sign
-                signTimer += Time.deltaTime;
-            }
-            if(signTimer >= 1.5)
-            {
-                turnLeft.SetActive(false); // stops display
-                signTimer = 0;
-                kartInteractions.passingTurn3 = false;
-            }
-        }
-
-        if(kartInteractions.passingTurn4 == true)
-        {
-           if(signTimer <= 1.5)
+           if(signTimer <= 2.0)
             {
                 shortTurnLeft.SetActive(true); // displays sign
                 signTimer += Time.deltaTime;
             }
-            if(signTimer >= 1.5)
+            if(signTimer >= 2.0)
             {
                 shortTurnLeft.SetActive(false); // stops display
                 signTimer = 0;
-                kartInteractions.passingTurn4 = false;
-            }
-        }
-
-        if(kartInteractions.passingTurn5 == true)
-        {
-           if(signTimer <= 1.5)
-            {
-                turnLeft.SetActive(true); // displays sign
-                signTimer += Time.deltaTime;
-            }
-            if(signTimer >= 1.5)
-            {
-                turnLeft.SetActive(false); // stops display
-                signTimer = 0;
-                 kartInteractions.passingTurn5 = false;
+                kartInteractions.passingTurn2 = false;
             }
         }
     }
