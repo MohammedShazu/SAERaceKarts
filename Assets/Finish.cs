@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
     { 
-    private int currentLap;
+    public int currentLap;
     private void Start()
     {
     currentLap = 1;
