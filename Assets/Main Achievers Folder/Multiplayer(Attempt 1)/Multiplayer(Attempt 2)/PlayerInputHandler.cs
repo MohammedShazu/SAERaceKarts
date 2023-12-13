@@ -30,7 +30,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Input_onActionTriggered(CallbackContext obj)
     {
-        throw new NotImplementedException();
+        if(obj.action.name == controls.Gameplay.Move.name)
+        {
+            OnMove(obj);
+        }
     }
 
     public void OnMove(CallbackContext context)

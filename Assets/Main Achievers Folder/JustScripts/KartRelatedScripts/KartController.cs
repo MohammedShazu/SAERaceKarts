@@ -78,7 +78,7 @@ public class KartController : MonoBehaviour
     {
         _currentSpeed = 0;
     }
-    //This makes the car moving when you press play
+    //This makes the car moving when you pr_ess play
     private void TurnHandler()
     {
         float newRotation = _turnAmount * turnSpeed * Time.deltaTime;
