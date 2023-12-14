@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using static UnityEngine.InputSystem.InputAction;
 
-public class InputHandler : MonoBehaviour, AxisState.IInputAxisProvider
+public class InputHandler : MonoBehaviour
 {
+    public Vector2 InputVector { get; private set; }
 
-    [HideInInspector]
-    public InputAction horizontal;
-    [HideInInspector]
-    public InputAction vertical;
+    public Vector2 MousePosition { get; private set; }
 
+   
 
-    public float GetAxisValue(int axis)
+    public void SetInputVector(CallbackContext ctx)
     {
-        switch (axis)
-        {
-            case 0: return horizontal.ReadValue<Vector2>().x;
-            case 1: return horizontal.ReadValue<Vector2>().y;
-            case 2: return vertical.ReadValue<float>();
-        }
-
-        return 0;
+        InputVector = ctx.ReadValue<Vector2>();
     }
 }

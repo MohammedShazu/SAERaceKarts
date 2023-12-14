@@ -40,7 +40,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(karts != null)
         {
-            karts.SetInputVector(context.ReadValue<Vector2>());
+            //karts.SetInputVector(context.ReadValue<Vector2>());
         }
     }
    

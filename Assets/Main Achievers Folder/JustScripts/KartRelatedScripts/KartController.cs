@@ -15,8 +15,7 @@ public class KartController : MonoBehaviour
     public bool countdownFinished = false;
     public float gravityMultiplier;
 
-    private Vector2 inputVector = Vector2.zero;
-
+    private InputHandler _input;
 
     //creating a private rigidbody for reference
     // Start is called before the first frame update
@@ -27,6 +26,12 @@ public class KartController : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void Awake()
+    {
+        _input = GetComponent<InputHandler>();
+    }
+
     void Update()
     {
         if(countdownFinished)
@@ -104,8 +109,5 @@ public class KartController : MonoBehaviour
         }
     }
 
-    public void SetInputVector(Vector2 direction)
-    {
-        inputVector = direction;
-    }
+    
 }
