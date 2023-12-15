@@ -28,9 +28,4 @@ public class Respawning : MonoBehaviour
             playerPos.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
