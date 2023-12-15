@@ -378,7 +378,7 @@ MonoBehaviour:
   turnLeft: {fileID: 923650283}
   shortTurnLeft: {fileID: 427933838}
   signTimer: 0
-  kartInteractions: {fileID: 610913717}
+  kartInteractions: {fileID: 0}
 --- !u!1 &46738940
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,8 +940,9 @@ Transform:
   - {fileID: 1846528267}
   - {fileID: 517336281}
   - {fileID: 1255482561}
+  - {fileID: 1698366347}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &223801458
 BoxCollider:
@@ -1753,11 +1754,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388386101}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!20 &395945441 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8402176967342068667, guid: 5ae911ba4cf18d047863933ed973ea05, type: 3}
-  m_PrefabInstance: {fileID: 8402176967536621146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413820714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,26 +2491,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591217531}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &610913709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8402176967524614363, guid: 5ae911ba4cf18d047863933ed973ea05, type: 3}
-  m_PrefabInstance: {fileID: 8402176967536621146}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &610913717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610913709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadcaea7b3cc97946acb2e946a2fc66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kartPlayer: {fileID: 1378920130}
-  passingTurn1: 0
-  passingTurn2: 0
 --- !u!1 &633686653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,7 +2725,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &735840435
 GameObject:
@@ -4933,11 +4909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playMusic: 0
   MusicPlayer: {fileID: 1356774365}
---- !u!1 &1378920130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8402176965840390251, guid: 5ae911ba4cf18d047863933ed973ea05, type: 3}
-  m_PrefabInstance: {fileID: 8402176967536621146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381249645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,7 +5557,7 @@ Transform:
   - {fileID: 1511858468}
   - {fileID: 88886483}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624868077
 GameObject:
@@ -5883,7 +5854,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698366346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.5091157, y: -4.3673697, z: 19.26718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5916,8 +5887,8 @@ Transform:
   - {fileID: 1545701453}
   - {fileID: 527734070}
   - {fileID: 1381249646}
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 223801457}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1719571124
 GameObject:
@@ -6242,7 +6213,7 @@ Transform:
   - {fileID: 2035358919}
   - {fileID: 1014596068}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787527081
 GameObject:
@@ -8452,7 +8423,7 @@ PrefabInstance:
     - target: {fileID: 768672497503636571, guid: c37a0b6a49a46ae4b97294273ba03017, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 395945441}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37a0b6a49a46ae4b97294273ba03017, type: 3}
 --- !u!1001 &8402176967536621146
