@@ -30,14 +30,17 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Input_onActionTriggered(CallbackContext obj)
     {
-        throw new NotImplementedException();
+        if(obj.action.name == controls.Gameplay.Move.name)
+        {
+            OnMove(obj);
+        }
     }
 
     public void OnMove(CallbackContext context)
     {
         if(karts != null)
         {
-            karts.SetInputVector(context.ReadValue<Vector2>());
+            //karts.SetInputVector(context.ReadValue<Vector2>());
         }
     }
    
