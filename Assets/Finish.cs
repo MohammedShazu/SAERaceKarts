@@ -15,6 +15,7 @@ public class Finish : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player has reached the finish line!");
+            currentLap ++;
             // This is where you can add a finish line for example displaying a victory screen.
         }
         if (currentLap == 3)
